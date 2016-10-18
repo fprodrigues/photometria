@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/fprodrigues/photometria.git"
+},
   "dependencies": {
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
@@ -26,3 +30,4 @@
     "passport-local": "^1.0.0"
   }
 }
+
