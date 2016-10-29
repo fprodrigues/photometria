@@ -41,26 +41,31 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Photometria</a>
+          <a class="navbar-brand" href="/">Photometria</a>
+          
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+          
 
             {{#if user}}
-             <button href="/users/logout" class="btn btn-danger">Logout</button>
+               <div class="navbar-form navbar-right">
+             <button href="/user/logout" class="btn btn-danger">Logout</button>
+              </div>
             {{else}}
-           
+            <div class="navbar-form navbar-right">
+              <form>
               <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
-            </div>
+                </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Entrar</button>
-            <button href="/users/register" class="btn btn-info">Criar nova conta</button>
-            {{/if}}
-            
           </form>
+            <a href="/users/register" class="form-group"><button class="btn btn-info">Criar nova conta</button></a>
+        </div>
+          {{/if}}
+          
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
