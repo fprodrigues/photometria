@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "repository": {
-  "type": "git",
-  "url": "git://github.com/fprodrigues/photometria.git"
-},
+    "type": "git",
+    "url": "git://github.com/fprodrigues/photometria.git"
+  },
   "dependencies": {
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
@@ -19,6 +19,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
     "express-messages": "^1.0.1",
     "express-session": "^1.14.1",
     "express-validator": "^2.20.10",
@@ -30,4 +31,3 @@
     "passport-local": "^1.0.0"
   }
 }
-

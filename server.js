@@ -11,17 +11,19 @@ var mongo = require('mongodb');
 var mongoose = require ('mongoose');
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
+var exphbs = require('express-handlebars');
 
 var index = require('./routes/index');
 var fundos = require('./routes/fundos');
-
+var users = require ('./routes/users');
 
 var app = express();
 
 // view engine
 app.set('views', path.join(__dirname,'views'));
-app.set('views engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+app.engine('handlebars', exphbs({defaultLayout:'layout'}));
+app.set('view engine', 'handlebars');
+
 
 // bodyParser middleware
 app.use(bodyParser.json());
@@ -78,6 +80,7 @@ app.use(function (req, res, next){
 // route
 app.use('/', index);
 app.use('/fundos', fundos);
+app.use('/users', users);
 
 app.set ('port', (process.env.PORT || 3000));
 
